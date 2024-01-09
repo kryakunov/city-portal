@@ -25,7 +25,7 @@ if ($password !== $passwordConfirmation) {
     $_SESSION['error'] = true;
     header('Location: /register.php');
 }
-var_dump($config);
+ 
 $query = $db->prepare("INSERT INTO users (email, name, dob, passowrd, group_id) VALUES (:email, :name, :dob, :passowrd, :group_id)");
 $query->execute([
     'email' => $email,
